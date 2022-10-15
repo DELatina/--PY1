@@ -5,10 +5,11 @@ increase = 0.05
 
 month = 0  # количество месяцев, которое можно прожить
 
-first_month = (money_capital - spend) + salary
-while first_month > 0:
-    spend = spend * (increase + 1)
-    first_month = (first_month - spend) + salary
+x = money_capital - spend
+while x > 0:
+    y = x + salary
+    spend = spend * (1 + increase)
+    x = y - spend
     month += 1
 
 
